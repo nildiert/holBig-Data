@@ -8,6 +8,8 @@ body
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
 }
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 .container_base
@@ -22,6 +24,7 @@ body
   background: none;
   color: white;
   width: 100%;
+  min-width: 360px;
   height: 100%;
 }
 .container .box
