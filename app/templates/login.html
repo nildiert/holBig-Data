@@ -1,0 +1,26 @@
+
+{% block head %}
+<title>
+    {% block title %}HolbiGrindr {% endblock %}
+</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+{% block navbar %}
+    
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="/validate">
+    User: <input type="text" name="user" required><br>
+    Pass: <input type="text" name="pass" required><br>
+    ApiKey: <input type="text" name="apikey" required><br>
+    <input type="submit" value="Submit">
+   </form>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+    
+{% endblock %}
