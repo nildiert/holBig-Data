@@ -1,0 +1,103 @@
+######################################################
+# credentials
+request front
+{
+  "token": "",
+  "email": "guillaume@holbertonschool.com",
+  "password": "HolbertonForever",
+  "scope": "credentials"
+}
+## server respond if is OK
+{
+  "token": "830924234kl2j4lk2h423h24jk3h4jk32hk42",
+  "msgstatus": "You get now a session",
+  "codestatus": "200",
+  "profile":{
+    "image":"https//misimagenes/algo.jpg",
+    "name": "Alguien de Holberton",
+    "email":"89080@holbertonschool.com",
+    "userid": "827984729847929"
+  }
+}
+## server respond if is Fail
+{
+  "token": "",
+  "codestatus": "403",
+  "msgstatus": "Fail your credentials"
+}
+######################################################
+# get other profile and image
+request front
+{
+  "token": "830924234kl2j4lk2h423h24jk3h4jk32hk42",
+  "scope": "ramdonprofile"
+}
+## server respond if is OK
+{
+  "msgstatus": "Correct query",
+  "codestatus": "200",
+  "profile":{
+    "image":"https//misimagenes/algo.jpg",
+    "name": "Alguien de Holberton",
+    "email":"89080@holbertonschool.com",
+    "userid": "827984729847929"
+  }
+}
+## server respond if is Fail
+{
+  "msgstatus": "Fail your query, try again",
+  "codestatus": "403"
+}
+######################################################
+# send like, otherwise use before message with scope "ramdonprofile"
+request front
+{
+  "token": "830924234kl2j4lk2h423h24jk3h4jk32hk42",
+  "scope": "like",
+  "userid": "sdafsdfas",
+  "email": "7999@holbertonschool.com"
+}
+## server respond if is OK
+{
+  "msgstatus": "You was match with id chekcer xxx of this profile",
+  "codestatus": "200",
+  "checker":{
+    "id":"987389434"
+  }
+}
+## server respond if is Fail
+{
+  "msgstatus": "Fail your query, try again",
+  "codestatus": "403"
+}
+######################################################
+######################################################
+# send like, otherwise use before message with scope "ramdonprofile"
+request front
+{
+  "token": "830924234kl2j4lk2h423h24jk3h4jk32hk42",
+  "scope": "history"
+}
+## server respond if is OK
+{
+  "msgstatus": "Correct query",
+  "codestatus": "200",
+  "profiles":[{
+    "image":"https//misimagenes/algo.jpg",
+    "name": "Alguien de Holberton",
+    "email":"89080@holbertonschool.com",
+    "userid": "827984729847929"
+  },
+  {
+    "image":"https//misimagenes/algo2.jpg",
+    "name": "Alguien de Holberton2",
+    "email":"83088@holbertonschool.com",
+    "userid": "5893479837498"
+  }]
+}
+## server respond if is Fail
+{
+  "msgstatus": "Fail your query, try again",
+  "codestatus": "403"
+}
+######################################################
