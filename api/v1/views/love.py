@@ -41,12 +41,12 @@ def root():
 
     return jsonify(status= "OK!")
 
-@app_views.route('/auth_token')
+@app_views.route('/auth_token', methods=['POST'])
 def get_auth_token():
     student = {
-        "api_key": request.form.get('api_key'),
-        "email": request.form.get('email'),
-        "password": request.form.get('password'),
+        "api_key": "13278f54bc616165bf99889881d0ba3a",
+        "email": "792@holbertonschool.com",
+        "password": "keepitsimple123++",
         "scope": "checker"
     }
 
