@@ -233,6 +233,7 @@ ul {
 .container2 .couple
 {
   width:60%;
+  max-width: 800px;
   margin: 10em 0em 1em 0em;
   display: flex;
   flex-direction: row;
@@ -248,5 +249,11 @@ ul {
   width:40%;
   margin: 1em 1em 1em 1em;
   text-align: center;
+}
+.container2 .couple .profile-match h6
+{
+  text-align: center;
   color: red;
+  overflow: hidden;
+  height: 4em;
 }
