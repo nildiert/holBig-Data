@@ -7,7 +7,7 @@ import os
 from flask import Flask, request, jsonify, render_template, redirect, make_response, session
 from api.v1.views import app_views
 from flask_cors import CORS
-from .config import Config  
+from .config import Config
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
