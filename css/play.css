@@ -2,7 +2,7 @@ body
 {
   margin: 0;
   padding: 0;
-  background: #c12529;
+  background: #00FFFF;
   background-image: url("../image/blue-burst-abstract-bg.png");
   background-size: inherit;
   background-repeat: repeat;
@@ -10,6 +10,8 @@ body
   height: 100%;
   width: 100%;
   margin: 0px 0px 0px 0px;
+  display:flex;
+  flex-direction:column;
 }
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 .container_base
@@ -105,17 +107,40 @@ body
   min-height: 4em;
   width: 100%;
 }
-
+ul {
+  list-style-type: none;
+}
 .container .box .card .otherprofile
 {
   background: none;
   min-height: 10em;
   width: 100%;
 }
-.container .box .card .otherprofile img
+.container .box .card .otherprofile .picprofle img
 {
   margin: 10px 10px 10px 10px;
 }
+.btns-actions
+{
+  background: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*flex-flow: row wrap;*/
+  justify-content:center;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  width: 100%;
+}
+.container .box .card .otherprofile .btn-nonlike img,
+.container .box .card .otherprofile .btn-like img
+{
+  width: 70%;
+  max-width: 100px;
+  min-width: 20px;
+}
+
 .container .box .card .text
 {
   /*background: #c12529;*/
@@ -132,4 +157,24 @@ body
   width: 100%;
   font-family:Arial;
 	font-size:1em;
+}
+.foot
+{
+  background: blue;
+  color: white;
+  font-size: 0.7em;
+}
+.foot .credits
+{
+  align-content: center;
+  width: 90%;
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+.foot .authors
+{
+  width: 90%;
+  overflow: hidden;
+  margin-left: 1em;
+  margin-top: 0.3em;
 }
