@@ -1,26 +1,32 @@
-
-{% block head %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 <title>
-    {% block title %}HolbiGrindr {% endblock %}
+    HolbiGrindr
 </title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-{% endblock %}
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-{% block body %}
-{% block navbar %}
+</head>
+
+<body>
     
-{% endblock %}
 
-{% block content -%}
-<form method="POST" action="/validate">
-    User: <input type="text" name="user" required><br>
-    Pass: <input type="text" name="pass" required><br>
-    ApiKey: <input type="text" name="apikey" required><br>
-    <input type="submit" value="Submit">
-   </form>
-{% endblock %}
 
-{% block scripts %}
-{% endblock %}
+
     
-{% endblock %}
+<input type="text" name="user" id="email"></p>
+<input type="text" name="user" id="pass"></p>
+<input type="text" name="user" id="key"></p>
+    <button type="button" value="Submit" id="enviar">
+    Enviar
+    </button>
+
+
+<script src="{{ url_for('static', filename='js/login.js')}}"></script>
+
+</body>    
+</html>

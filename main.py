@@ -18,6 +18,4 @@ def index():
 def login():
     return render_template('login.html')
 
-@app.route('/validate', methods=['POST'])
-def validate():
-    return request.form.get('user')
+

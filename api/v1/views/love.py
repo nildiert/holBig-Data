@@ -8,7 +8,13 @@ import requests
 
 @app_views.route('/')
 def root():
-    return jsonify({"Hola": "OK"})
+    ret = '{"data": "JSON string example"}'
+
+    resp = Response(response=ret,
+                    status=200,
+                    mimetype="application/json")
+
+    return resp
 
 @app_views.route('/love_path_photo')
 def love_path_photo():
