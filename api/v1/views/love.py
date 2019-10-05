@@ -45,13 +45,17 @@ def root():
 @app_views.route('/auth_token', methods=['POST'])
 def get_auth_token():
     student = {
-        "api_key": "13278f54bc616165bf99889881d0ba3a",
-        "email": "792@holbertonschool.com",
-        "password": "keepitsimple123++",
+        "api_key": "",
+        "email": "",
+        "password": "",
         "scope": "checker"
     }
-
+    data = request.get_json(force=True)
+    student["api_key"] = data["api_key"]
+    student["email"] = data["email"]
+    student["password"] = data["password"]
     res = requests.post('https://intranet.hbtn.io/users/auth_token.json', data=student)
+    content = request.data
 
     return jsonify(token= res.json()["auth_token"])
 
@@ -62,6 +66,7 @@ def love_path_photo():
         'Content-Type': 'application/json',
     }
     res = requests.get('https://intranet.hbtn.io/users/me.json', params=auth_token, headers=headers)
+    
     return res.json()
 
 @app_views.route('/task')
