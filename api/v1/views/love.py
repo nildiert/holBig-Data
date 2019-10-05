@@ -1,14 +1,20 @@
 #!/usr/bin/python3
 """function to create the route status"""
 from api.v1.views import app_views
-from flask import jsonify, abort, request
+from flask import jsonify, abort, request, Response
 import requests
 
 
 
 @app_views.route('/')
 def root():
-    return jsonify({"Hola": "OK"})
+    ret = '{"data": "JSON string example"}'
+
+    resp = Response(response=ret,
+                    status=200,
+                    mimetype="application/javascript")
+
+    return jsonify(status= "OK!")
 
 @app_views.route('/love_path_photo')
 def love_path_photo():
