@@ -178,3 +178,15 @@ ul {
   margin-left: 1em;
   margin-top: 0.3em;
 }
+.logout a, .logout a:link, .logout a:active
+{
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+}
+.logout a:hover
+{
+  font-size: 1em;
+  color: yellow;
+  text-decoration: none;
+}
