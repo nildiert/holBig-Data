@@ -1,0 +1,26 @@
+.red {
+   color: #fff;
+      background-color: #e1003c;
+         height: 120%;
+    border-radius: 0% 88% 88% 0%;
+       margin-right: 24%;
+       }
+       .text-redholberton {
+          color: #e1003c;
+  }
+  .form-control.login-user {
+     border: 0 solid #fff !important;
+      }
+      .align-image {
+         text-align: center;
+    margin-top: 30%;
+    }
+    #login {
+       margin: 0 100px;
+       }
+       .row {
+           width: 100%;
+   }
+   .card {
+      border: transparent;
+      }
