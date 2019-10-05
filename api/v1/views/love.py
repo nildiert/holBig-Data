@@ -14,7 +14,7 @@ def root():
                     status=200,
                     mimetype="application/javascript")
 
-    return resp
+    return jsonify(status= "OK!")
 
 @app_views.route('/love_path_photo')
 def love_path_photo():
