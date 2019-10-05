@@ -67,12 +67,12 @@ def task():
     }
     task_list = random.choice(list(projects.values()))
     task = random.choice(task_list)
-    print(task)
     res = requests.get('https://intranet.hbtn.io/projects/{}.json'.format(task), params=auth_token, headers=headers)
 
     proj = res.json()
     proj_tasks = proj["tasks"]
-    last_task = proj_tasks[len(proj_tasks) - 1]
+    #last_task = proj_tasks[len(proj_tasks) - 1]
+    last_task = random.choice(proj_tasks)
 
     #get a correction
     correction = requests.post('https://intranet.hbtn.io/tasks/{}/start_correction.json'.format(last_task["id"]), data=auth_token)
@@ -83,11 +83,14 @@ def task():
     while (task_checks.json()["status"] == "Sent"):
         time.sleep(3)
         task_checks = requests.get('https://intranet.hbtn.io/correction_requests/{}.json'.format(task_id), params=auth_token, headers=headers)
-
     # check if all checkers of the tasks have passed
-    results = task_checks.json()["result_display"]
-
+    results = task_checks.json()['result_display']
+    dict_task = {"title": last_task["title"],
+                 "repo": last_task["github_repo"],
+                 "file": last_task["github_file"],
+                 "status": "Done, You are ready to love"
+    }
     for check in results["checks"]:
-        if check["passed"] == "false":
-            return ("Not ready to love")
-    return "Ready for love"
+        if check["passed"] == False:
+            dict_task["status"] = "Not 100%, You are NOT ready to love"
+    return dict_task
