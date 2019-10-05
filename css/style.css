@@ -1,0 +1,15 @@
+.red {
+    color: #fff;
+    background-color: #e1003c;
+    height: 120%;
+}
+.text-redholberton {
+    color: #e1003c;
+}
+.form-control.login-user {
+    border: 0 solid #fff !important;
+  }
+.align-image {
+    text-align: center;
+    margin-top: 30%;
+}
