@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """function to create the route status"""
 from api.v1.views import app_views
-from flask import jsonify, abort, request
+from flask import jsonify, abort, request, Response
 import requests
 
 
@@ -13,6 +13,7 @@ def root():
     resp = Response(response=ret,
                     status=200,
                     mimetype="application/json")
+
 
     return resp
 
