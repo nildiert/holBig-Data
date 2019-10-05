@@ -41,6 +41,7 @@ def root():
 
     return jsonify(status= "OK!")
 
+
 @app_views.route('/auth_token', methods=['POST'])
 def get_auth_token():
     student = {
