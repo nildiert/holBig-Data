@@ -11,7 +11,7 @@ $(document).ready(function () {
             "async": true,
             "crossDomain": true,
             "url": "https://holbigdata-api.herokuapp.com/users",
-            "method": "POST",
+            "method": "GET",
             "headers": {
                 "accept": "application/javascript",
                 "Access-Control-Allow-Origin":"*"
