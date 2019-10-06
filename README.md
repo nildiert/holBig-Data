@@ -56,6 +56,10 @@ flask run
 
 After this, you will be able to connect to the server from your web browser. (If you're using Vagrant or some virtual machine, maybe you need to set it up for forwarded ports)
 
+### Prototype online (Minimum Viable Product) 
+
+You can see it in http://fesusrocuts.tech:5000/
+
 ### Authors
 [Ryan Hudson](https://github.com/ryanhudson)
 [Nildiert Jimenez Jaramillo](https://github.com/nildiert)
