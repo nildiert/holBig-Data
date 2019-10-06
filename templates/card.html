@@ -1,0 +1,12 @@
+<div class="otherprofile">
+  <div class="picprofle"><img src="{{otherdata.image}}" class="img-fluid rounded-circle mb-2" alt="{{otherdata.name}} {{otherdata.lastname}}"></div>
+  <div class="btns-actions">
+    <div class="btn-nonlike"><img src="{{ url_for('static', filename='image/cancel-green.png') }}" class="img-fluid rounded-circle mb-2" alt="cancel action">
+    </div>
+    <div class="btn-like"><img src="{{ url_for('static', filename='image/like-blue.png') }}" class="img-fluid rounded-circle mb-2" alt="like action">
+    </div>
+  </div>
+  <div class="name">
+    {{otherdata.name}} {{otherdata.lastname}}
+  </div>
+</div>

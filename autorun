@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+export FLASK_DEBUG=1
+export FLASK_APP=main.py
+python3 -m api.v1.app | tee autorun_api.log &
+sleep 5
+python3 main.py | tee autorun_main.log &
+sleep 5

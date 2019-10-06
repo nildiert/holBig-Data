@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title%}{{data.title}}{% endblock %}
+{% block content%}
+  <div class="container">
+    <div class="box">
+      <div class="head brandholbeton">
+	<img src="{{ url_for('static', filename='image/marca_holberton.png') }}?{{data.cache_id}}" alt="http://www.holbertonschool.co">
+      </div>
+      <div class="line_break">
+      </div>
+      <div class="card">
+      </div>
+      <div class="line_break">
+      </div>
+      <div class="foot">
+      </div>
+    </div>
+  </div>
+{% endblock %}
