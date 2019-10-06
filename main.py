@@ -49,7 +49,8 @@ def login():
 
 @app.route('/', methods=['GET'])
 def index():
-    data = {"token":"", "cache_id":uuid.uuid4(),"title":"Sing In to play!"}
+    data = {"token":"", "cache_id":uuid.uuid4(), "title":"Sing In to play!", "authors": "You can see more of the project touch the next link: <a href='https://github.com/nildiert/holBig-Data/blob/master/README.md' alt='Authors and Readme'>https://github.com/nildiert/holBig-Data/blob/master/README.md</a>"}
+    data = {"token":"", "cache_id":uuid.uuid4(), "title":"Sing In to play!", "link": "https://github.com/nildiert/holBig-Data/blob/master/README.md", "authors": "Authors: Ryan Hudson Nildiert Jimenez Jaramillo Jessica Sandoval Jeniffer Vanegas Lucia Rodriguez Toloza Andres Martin Peña Fesus Rocuts Nicolas Martínez Machado"}
     return render_template('index.html', data=data)
 
 

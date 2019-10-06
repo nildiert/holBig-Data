@@ -120,6 +120,8 @@ ul {
 .container .box .card .otherprofile .picprofle img
 {
   margin: 10px 10px 10px 10px;
+  width: 80%;
+  max-width: 300px;
 }
 .btns-actions
 {
